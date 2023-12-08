@@ -1,7 +1,7 @@
 package com.minetrone.mlib.config.backend.internal.settings;
 
-import de.leonhard.storage.internal.provider.SimplixProviders;
-import de.leonhard.storage.internal.provider.MapProvider;
+import com.minetrone.mlib.config.backend.internal.provider.SimplixProviders;
+import com.minetrone.mlib.config.backend.internal.provider.MapProvider;
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
 

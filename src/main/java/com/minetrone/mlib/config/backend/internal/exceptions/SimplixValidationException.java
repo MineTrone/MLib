@@ -1,6 +1,6 @@
 package com.minetrone.mlib.config.backend.internal.exceptions;
 
-import de.leonhard.storage.internal.exception.SimplixException;
+import com.minetrone.mlib.config.backend.internal.exception.SimplixException;
 
 /**
  * Thrown to indicate that something went wrong, or just to end our code

@@ -1,9 +1,9 @@
 package com.minetrone.mlib.config.backend;
 
-import de.leonhard.storage.internal.FlatFile;
-import de.leonhard.storage.internal.settings.ConfigSettings;
-import de.leonhard.storage.internal.settings.DataType;
-import de.leonhard.storage.internal.settings.ReloadSettings;
+import com.minetrone.mlib.config.backend.internal.FlatFile;
+import com.minetrone.mlib.config.backend.internal.settings.ConfigSettings;
+import com.minetrone.mlib.config.backend.internal.settings.DataType;
+import com.minetrone.mlib.config.backend.internal.settings.ReloadSettings;
 import lombok.NonNull;
 import org.jetbrains.annotations.Nullable;
 

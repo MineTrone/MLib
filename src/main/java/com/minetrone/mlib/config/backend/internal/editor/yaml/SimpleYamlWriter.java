@@ -2,7 +2,7 @@ package com.minetrone.mlib.config.backend.internal.editor.yaml;
 
 import com.esotericsoftware.yamlbeans.YamlWriter;
 import com.minetrone.mlib.config.backend.internal.provider.SimplixProviders;
-import de.leonhard.storage.util.FileUtils;
+import com.minetrone.mlib.config.backend.util.FileUtils;
 import java.io.File;
 import java.io.Writer;
 

@@ -1,6 +1,6 @@
 package com.minetrone.mlib.config.backend.util;
 
-import de.leonhard.storage.internal.provider.SimplixProviders;
+import com.minetrone.mlib.config.backend.internal.provider.SimplixProviders;
 import lombok.*;
 import lombok.experimental.UtilityClass;
 import org.jetbrains.annotations.Nullable;

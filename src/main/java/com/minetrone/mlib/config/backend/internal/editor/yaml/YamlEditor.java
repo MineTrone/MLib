@@ -1,7 +1,7 @@
 package com.minetrone.mlib.config.backend.internal.editor.yaml;
 
-import de.leonhard.storage.util.FileUtils;
-import de.leonhard.storage.util.YamlUtils;
+import com.minetrone.mlib.config.backend.util.FileUtils;
+import com.minetrone.mlib.config.backend.util.YamlUtils;
 import java.io.File;
 import java.util.List;
 import lombok.Getter;

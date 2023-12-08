@@ -1,7 +1,7 @@
 package com.minetrone.mlib.config.backend.internal.editor.toml;
 
 import com.minetrone.mlib.config.backend.internal.exceptions.TomlException;
-import de.leonhard.storage.util.FastStringWriter;
+import com.minetrone.mlib.config.backend.util.FastStringWriter;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.format.DateTimeFormatter;

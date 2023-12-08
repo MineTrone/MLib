@@ -1,13 +1,13 @@
 package com.minetrone.mlib.config.backend;
 
-import de.leonhard.storage.internal.FlatFile;
-import de.leonhard.storage.internal.provider.InputStreamProvider;
-import de.leonhard.storage.internal.provider.SimplixProviders;
-import de.leonhard.storage.internal.settings.ConfigSettings;
-import de.leonhard.storage.internal.settings.DataType;
-import de.leonhard.storage.internal.settings.ReloadSettings;
-import de.leonhard.storage.util.FileUtils;
-import de.leonhard.storage.util.Valid;
+import com.minetrone.mlib.config.backend.internal.FlatFile;
+import com.minetrone.mlib.config.backend.internal.provider.InputStreamProvider;
+import com.minetrone.mlib.config.backend.internal.provider.SimplixProviders;
+import com.minetrone.mlib.config.backend.internal.settings.ConfigSettings;
+import com.minetrone.mlib.config.backend.internal.settings.DataType;
+import com.minetrone.mlib.config.backend.internal.settings.ReloadSettings;
+import com.minetrone.mlib.config.backend.util.FileUtils;
+import com.minetrone.mlib.config.backend.util.Valid;
 import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Path;

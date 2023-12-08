@@ -1,6 +1,6 @@
 package com.minetrone.mlib.config.backend.internal.serialize;
 
-import de.leonhard.storage.util.Valid;
+import com.minetrone.mlib.config.backend.util.Valid;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.minetrone.mlib.config.backend.internal;
 
-import de.leonhard.storage.internal.settings.DataType;
-import de.leonhard.storage.util.JsonUtils;
+import com.minetrone.mlib.config.backend.internal.settings.DataType;
+import com.minetrone.mlib.config.backend.util.JsonUtils;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,6 +1,6 @@
 package com.minetrone.mlib.config.backend.util;
 
-import de.leonhard.storage.internal.FlatFile;
+import com.minetrone.mlib.config.backend.internal.FlatFile;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass

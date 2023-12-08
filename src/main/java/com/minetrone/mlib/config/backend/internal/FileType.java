@@ -1,6 +1,6 @@
 package com.minetrone.mlib.config.backend.internal;
 
-import de.leonhard.storage.util.FileUtils;
+import com.minetrone.mlib.config.backend.util.FileUtils;
 import java.io.File;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

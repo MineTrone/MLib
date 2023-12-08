@@ -1,12 +1,12 @@
 package com.minetrone.mlib.config.backend.internal;
 
-import de.leonhard.storage.annotation.ConfigPath;
-import de.leonhard.storage.internal.provider.SimplixProviders;
-import de.leonhard.storage.internal.settings.DataType;
-import de.leonhard.storage.internal.settings.ReloadSettings;
-import de.leonhard.storage.sections.FlatFileSection;
-import de.leonhard.storage.util.FileUtils;
-import de.leonhard.storage.util.Valid;
+import com.minetrone.mlib.config.backend.annotation.ConfigPath;
+import com.minetrone.mlib.config.backend.internal.provider.SimplixProviders;
+import com.minetrone.mlib.config.backend.internal.settings.DataType;
+import com.minetrone.mlib.config.backend.internal.settings.ReloadSettings;
+import com.minetrone.mlib.config.backend.sections.FlatFileSection;
+import com.minetrone.mlib.config.backend.util.FileUtils;
+import com.minetrone.mlib.config.backend.util.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;

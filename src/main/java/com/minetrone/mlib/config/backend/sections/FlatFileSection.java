@@ -1,7 +1,7 @@
 package com.minetrone.mlib.config.backend.sections;
 
-import de.leonhard.storage.internal.DataStorage;
-import de.leonhard.storage.internal.FlatFile;
+import com.minetrone.mlib.config.backend.internal.DataStorage;
+import com.minetrone.mlib.config.backend.internal.FlatFile;
 import java.util.Set;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

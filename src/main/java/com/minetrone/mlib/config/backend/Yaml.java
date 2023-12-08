@@ -1,16 +1,16 @@
 package com.minetrone.mlib.config.backend;
 
-import de.leonhard.storage.internal.FileData;
-import de.leonhard.storage.internal.FileType;
-import de.leonhard.storage.internal.FlatFile;
-import de.leonhard.storage.internal.editor.yaml.SimpleYamlReader;
-import de.leonhard.storage.internal.editor.yaml.SimpleYamlWriter;
-import de.leonhard.storage.internal.editor.yaml.YamlEditor;
-import de.leonhard.storage.internal.editor.yaml.YamlParser;
-import de.leonhard.storage.internal.settings.ConfigSettings;
-import de.leonhard.storage.internal.settings.DataType;
-import de.leonhard.storage.internal.settings.ReloadSettings;
-import de.leonhard.storage.util.FileUtils;
+import com.minetrone.mlib.config.backend.internal.FileData;
+import com.minetrone.mlib.config.backend.internal.FileType;
+import com.minetrone.mlib.config.backend.internal.FlatFile;
+import com.minetrone.mlib.config.backend.internal.editor.yaml.SimpleYamlReader;
+import com.minetrone.mlib.config.backend.internal.editor.yaml.SimpleYamlWriter;
+import com.minetrone.mlib.config.backend.internal.editor.yaml.YamlEditor;
+import com.minetrone.mlib.config.backend.internal.editor.yaml.YamlParser;
+import com.minetrone.mlib.config.backend.internal.settings.ConfigSettings;
+import com.minetrone.mlib.config.backend.internal.settings.DataType;
+import com.minetrone.mlib.config.backend.internal.settings.ReloadSettings;
+import com.minetrone.mlib.config.backend.util.FileUtils;
 
 import java.io.File;
 import java.io.IOException;

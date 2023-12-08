@@ -1,10 +1,10 @@
 package com.minetrone.mlib.config.backend;
 
-import de.leonhard.storage.internal.FileData;
-import de.leonhard.storage.internal.FileType;
-import de.leonhard.storage.internal.FlatFile;
-import de.leonhard.storage.internal.settings.ReloadSettings;
-import de.leonhard.storage.util.FileUtils;
+import com.minetrone.mlib.config.backend.internal.FileData;
+import com.minetrone.mlib.config.backend.internal.FileType;
+import com.minetrone.mlib.config.backend.internal.FlatFile;
+import com.minetrone.mlib.config.backend.internal.settings.ReloadSettings;
+import com.minetrone.mlib.config.backend.util.FileUtils;
 import lombok.Cleanup;
 import lombok.Getter;
 import lombok.val;

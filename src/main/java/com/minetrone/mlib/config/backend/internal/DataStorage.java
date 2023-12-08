@@ -1,9 +1,9 @@
 package com.minetrone.mlib.config.backend.internal;
 
-import de.leonhard.storage.internal.provider.SimplixProviders;
-import de.leonhard.storage.internal.serialize.SimplixSerializer;
-import de.leonhard.storage.util.ClassWrapper;
-import de.leonhard.storage.util.Valid;
+import com.minetrone.mlib.config.backend.internal.provider.SimplixProviders;
+import com.minetrone.mlib.config.backend.internal.serialize.SimplixSerializer;
+import com.minetrone.mlib.config.backend.util.ClassWrapper;
+import com.minetrone.mlib.config.backend.util.Valid;
 import lombok.NonNull;
 import org.jetbrains.annotations.Nullable;
 

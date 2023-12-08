@@ -1,6 +1,6 @@
 package com.minetrone.mlib.config.backend.util;
 
-import de.leonhard.storage.internal.DataStorage;
+import com.minetrone.mlib.config.backend.internal.DataStorage;
 import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.List;

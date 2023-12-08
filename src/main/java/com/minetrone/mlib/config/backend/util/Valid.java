@@ -1,6 +1,6 @@
 package com.minetrone.mlib.config.backend.util;
 
-import de.leonhard.storage.internal.exceptions.SimplixValidationException;
+import com.minetrone.mlib.config.backend.internal.exceptions.SimplixValidationException;
 import lombok.NonNull;
 import lombok.experimental.UtilityClass;
 import org.jetbrains.annotations.Nullable;
