@@ -33,6 +33,18 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <artifactId>yamlbeans</artifactId>
+            <groupId>com.esotericsoftware.yamlbeans</groupId>
+            <scope>compile</scope>
+            <version>1.15</version>
+        </dependency>
+        <dependency>
+            <artifactId>json</artifactId>
+            <groupId>org.json</groupId>
+            <scope>compile</scope>
+            <version>20231013</version>
+        </dependency>
+        <dependency>
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
             <version>LATEST</version>
