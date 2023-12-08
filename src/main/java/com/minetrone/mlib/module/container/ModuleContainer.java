@@ -2,6 +2,7 @@ package com.minetrone.mlib.module.container;
 
 import com.google.common.base.Preconditions;
 import com.minetrone.mlib.module.PluginModule;
+import com.minetrone.mlib.module.extras.SequentialListBuilder;
 import com.minetrone.mlib.module.helper.ModuleData;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;

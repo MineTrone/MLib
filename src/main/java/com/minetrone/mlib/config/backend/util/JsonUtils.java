@@ -3,7 +3,6 @@ package com.minetrone.mlib.config.backend.util;
 import java.util.*;
 import lombok.experimental.UtilityClass;
 import lombok.val;
-import lombok.var;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

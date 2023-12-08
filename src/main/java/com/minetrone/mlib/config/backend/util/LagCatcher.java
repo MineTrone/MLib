@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import lombok.experimental.UtilityClass;
 import lombok.val;
-import lombok.var;
 
 /**
  * Utility Class to take benchmarks
