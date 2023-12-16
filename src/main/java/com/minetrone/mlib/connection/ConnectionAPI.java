@@ -1,9 +1,15 @@
 package com.minetrone.mlib.connection;
 
-import com.minetrone.mlib.adventure.AdventureAPI;
+import com.minetrone.mlib.MLib;
+import com.minetrone.mlib.connection.backend.ConnectionJsonObjectGet;
+import com.minetrone.mlib.connection.backend.ConnectionLocalIP;
 import lombok.Getter;
+import lombok.Setter;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.Base64;
 
 public class ConnectionAPI {
@@ -32,6 +38,9 @@ public class ConnectionAPI {
     @Getter
     private final String time;
 
+    @Getter @Setter
+    private String pluginName;
+
     public ConnectionAPI() {
         this.id = "%%__USER__%%";
         this.name = "";
@@ -54,10 +63,10 @@ public class ConnectionAPI {
         this.time = time;
     }
 
-    /**
-    public static void applyPatch(JavaPlugin plugin, String patchID, String patch1) {
-        AdventureAPI adventureAPI = new AdventureAPI(plugin);
-        adventureAPI.consoleMessage(decode(patch1));
+    public void postConnection(JavaPlugin plugin, String patchID) {
+        setPluginName(secretMaker(MLib.getPrefix()));
+
+        MLib.getAdventureAPI().consoleMessage(secret("VmVyaWZ5aW5nIHRoZSA=" + this.pluginName + " dXNlci4uLg=="));
 
         String p = "%%__POLYMART__%%";
         String b = "%%__MCMARKET__%%";
@@ -80,15 +89,44 @@ public class ConnectionAPI {
 
 
         if (p.equalsIgnoreCase("1")) {
-            Main.getInstance().setFurnitureManager(new ConnectionAPI(user_id, user_name, inject_version, resource_id, download_token, nonce, download_agent, download_time));
+            MLib.setConnectionAPI(new ConnectionAPI(user_id, user_name, inject_version, resource_id, download_token, nonce, download_agent, download_time));
         } else if (b.equalsIgnoreCase("true")) {
-            Main.getInstance().setFurnitureManager(new ConnectionAPI(user_id, user_name, inject_version, resource_id, download_token, nonce, download_agent, download_time));
+            MLib.setConnectionAPI(new ConnectionAPI(user_id, user_name, inject_version, resource_id, download_token, nonce, download_agent, download_time));
         } else if (s.equalsIgnoreCase("true")) {
-            Main.getInstance().setFurnitureManager(new ConnectionAPI(user_id, user_name, inject_version, plugin_id, download_token, nonce, download_agent, download_time));
+            MLib.setConnectionAPI(new ConnectionAPI(user_id, user_name, inject_version, plugin_id, download_token, nonce, download_agent, download_time));
+        } else {
+            try {
+                String localIPAddress = ConnectionLocalIP.getLocalIPAddress();
+                if (localIPAddress == null) {
+                    MLib.getAdventureAPI().consoleMessage((secret("SW5jb3JyZWN0IElQIEFEUkVTUw==")));
+                    return;
+                }
+                JSONObject response = ConnectionJsonObjectGet.getObjects(m + localIPAddress);
+                if (response.getBoolean("status"))
+                    MLib.setConnectionAPI(new ConnectionAPI(user_id, response.getString("username"), inject_version, resource_id, download_token, nonce, download_agent, download_time));
+            } catch (IOException | JSONException e) {
+                e.printStackTrace();
+            }
         }
-    }*/
+    }
 
-    private static String decode(String s) {
+    public void getConnection(ConnectionAPI connection) {
+        if (connection != null) {
+            MLib.getAdventureAPI().consoleMessage(secret("WW91ciBsaWNlbnNlIGRvZXMgbm90IGV4aXN0LCB3aG8gYXJlIHlvdSAhPw=="));
+            MLib.getInstance().getServer().getPluginManager().disablePlugin(MLib.getInstance());
+            return;
+        }
+        MLib.getAdventureAPI().consoleMessage(secret("IA=="));
+        MLib.getAdventureAPI().consoleMessage(secret("SGVsbG8=") + ": " + connection.getName());
+        MLib.getAdventureAPI().consoleMessage(secret("VGhhbmtzIGZvciBCdXlpbmcgYW5kIFVzaW5nIA==" + this.getPluginName() + " LSBNaW5lVHJvbmU="));
+        MLib.getAdventureAPI().consoleMessage(secret("IA=="));
+    }
+
+    private static String secret(String s) {
         return new String(Base64.getDecoder().decode(s));
+    }
+
+    private static String secretMaker(String s) {
+        return new String(Base64.getEncoder().encode(s.getBytes()));
     }
 }
