@@ -22,17 +22,29 @@ public class MLib {
     @Getter @Setter
     private static ConnectionAPI connectionAPI;
 
+    @Getter
+    private static boolean initialized = false;
+
     public MLib(JavaPlugin plugin, String pluginName) {
         instance = plugin;
         prefix = pluginName;
         adventure = BukkitAudiences.create(plugin);
+        initialized = true;
     }
 
     public static AdventureAPI getAdventureAPI() {
         return new AdventureAPI(instance);
     }
 
+    public static AdventureAPI getAdventureAPI(JavaPlugin instance) {
+        return new AdventureAPI(instance);
+    }
+
     public static ConfigAPI getConfigAPI() {
+        return new ConfigAPI(instance);
+    }
+
+    public static ConfigAPI getConfigAPI(JavaPlugin instance) {
         return new ConfigAPI(instance);
     }
 
