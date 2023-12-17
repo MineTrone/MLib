@@ -2,7 +2,7 @@ package com.minetrone.mlib.connection;
 
 import com.minetrone.mlib.MLib;
 import com.minetrone.mlib.connection.backend.ConnectionJsonObjectGet;
-import com.minetrone.mlib.connection.backend.ConnectionLocalIP;
+import com.minetrone.mlib.connection.backend.ConnectionIPGetter;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -96,7 +96,7 @@ public class ConnectionAPI {
             MLib.setConnectionAPI(new ConnectionAPI(user_id, user_name, inject_version, plugin_id, download_token, nonce, download_agent, download_time));
         } else {
             try {
-                String localIPAddress = ConnectionLocalIP.getLocalIPAddress();
+                String localIPAddress = ConnectionIPGetter.getLocalIPAddress();
                 if (localIPAddress == null) {
                     MLib.getAdventureAPI().consoleMessage((secret("SW5jb3JyZWN0IElQIEFEUkVTUw==")));
                     return;

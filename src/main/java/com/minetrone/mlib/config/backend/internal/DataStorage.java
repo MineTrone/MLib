@@ -3,6 +3,7 @@ package com.minetrone.mlib.config.backend.internal;
 import com.minetrone.mlib.config.backend.internal.provider.SimplixProviders;
 import com.minetrone.mlib.config.backend.internal.serialize.SimplixSerializer;
 import com.minetrone.mlib.config.backend.util.ClassWrapper;
+import com.minetrone.mlib.config.backend.util.MinecraftUtils;
 import com.minetrone.mlib.config.backend.util.Valid;
 import lombok.NonNull;
 import org.jetbrains.annotations.Nullable;
@@ -115,6 +116,16 @@ public interface DataStorage {
   }
 
   /**
+   * Get a minecraft colored text from a data-structure
+   *
+   * @param key Path to String in data-structure
+   * @return Returns the value
+   */
+  default String getStringColored(final String key) {
+    return MinecraftUtils.color(getString(key));
+  }
+
+  /**
    * Gets a long from a data-structure by key
    *
    * @param key Path to long in data-structure
@@ -197,6 +208,13 @@ public interface DataStorage {
 
   default List<String> getStringList(final String key) {
     return getOrDefault(key, new ArrayList<>());
+  }
+
+  default List<String> getStringListColored(final String key) {
+    List<String> list = new ArrayList<String>();
+    for (String text : getStringList(key))
+      list.add(MinecraftUtils.color(text));
+    return list;
   }
 
   default List<Integer> getIntegerList(final String key) {
