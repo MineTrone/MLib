@@ -352,8 +352,8 @@ public class InventoryGui implements Listener {
      */
     public InventoryGui(JavaPlugin plugin, InventoryHolder owner, Component title, boolean dragEvent, String[] rows, GuiElement... elements) {
         this(plugin, new InventoryCreator(
-                        (gui, who, type) -> plugin.getServer().createInventory(new Holder(gui), type, gui.replaceVars(who, gui.getTitle())),
-                        (gui, who, size) -> plugin.getServer().createInventory(new Holder(gui), size, gui.replaceVars(who, gui.getTitle()))),
+                        (gui, who, type) -> plugin.getServer().createInventory(new Holder(gui), type, gui.getTitle(true)),
+                        (gui, who, size) -> plugin.getServer().createInventory(new Holder(gui), size, gui.getTitle(true))),
                 owner, title, dragEvent, rows, elements);
     }
 
