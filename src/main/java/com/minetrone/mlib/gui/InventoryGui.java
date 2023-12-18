@@ -1231,7 +1231,10 @@ public class InventoryGui implements Listener {
      * @return  The title of the gui
      */
     public Component getTitle(boolean component) {
-        return component ? Component.text(title) : Component.text(title, NamedTextColor.WHITE);
+        if (component)
+            return titleComponent;
+        else
+            return Component.text("Set title as component to get this");
     }
 
     public boolean isDragEvent() {
