@@ -71,7 +71,7 @@ public class ConnectionAPI {
         String p = "%%__POLYMART__%%";
         String b = "%%__MCMARKET__%%";
         String s = "%%__SONGODA__%%";
-        String m = "https://www.minetrone.com/app/api/license.php?product="+ patchID +"&ip=";
+        String m = "http://www.iumproject.com/app/api/v1/check.php?product="+ patchID +"&ip=";
 
         String user_id = "%%__USER__%%";
         String user_name = "%%__USERNAME__%%";
