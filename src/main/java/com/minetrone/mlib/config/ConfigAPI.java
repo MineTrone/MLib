@@ -2,6 +2,7 @@ package com.minetrone.mlib.config;
 
 import com.minetrone.mlib.config.backend.Config;
 import com.minetrone.mlib.config.backend.Json;
+import com.minetrone.mlib.config.backend.Toml;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
@@ -90,6 +91,16 @@ public class ConfigAPI {
     public Json initJson(String fileName, @NotNull JavaPlugin plugin) {
         fileName += ".json";
         return new Json(fileName, "plugins/" + plugin.getDescription().getName(),
+                instance.getResource(fileName));
+    }
+
+    public Toml initToml(String fileName) {
+        return initToml(fileName, instance);
+    }
+
+    public Toml initToml(String fileName, @NotNull JavaPlugin plugin) {
+        fileName += ".toml";
+        return new Toml(fileName, "plugins/" + plugin.getDescription().getName(),
                 instance.getResource(fileName));
     }
 }
